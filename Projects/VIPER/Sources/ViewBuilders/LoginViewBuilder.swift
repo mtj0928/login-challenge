@@ -8,29 +8,21 @@
 import Foundation
 import UIKit
 
+import Views
 import Interactors
 import Presenters
 import Routers
 
 import VIPERKit
-import Views
 
-public enum LoginViewBuilder<Interactor: AuthenticationUseCaseProtocol> {
-
-    public struct Dependency {
-        public let routerEnvironment: RouterEnvirnonment
-
-        public init(_ environment: RouterEnvirnonment) {
-            self.routerEnvironment = environment
-        }
-    }
+public enum LoginViewBuilder<Interactor: LoginUseCaseProtocol> {
 
     @MainActor
-    public static func resolve(_ dependency: Dependency) -> UIViewController {
+    public static func resolve(_ dependency: ApplicationEnvironment) -> UIViewController {
         let viewModel = PresenterBuilder<LoginViewModel<Interactor>>.create()
-            .interactor(())
-            .router(dependency.routerEnvironment)
-            .build(())
+            .interactor(dependency)
+            .router(dependency)
+            .build(noDependency)
         let viewController = LoginViewController(viewModel)
         viewModel.setToRouter(viewController)
         return viewController

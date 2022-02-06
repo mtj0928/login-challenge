@@ -7,20 +7,16 @@
 
 import Foundation
 import UIKit
+import Logging
 
 import VIPERKit
 import Interactors
 import Routers
 import Entities
 
-public class LoginViewModel<Interactor: AuthenticationUseCaseProtocol>: ObservableObject, PresenterProtocol {
+public class LoginViewModel<Interactor: LoginUseCaseProtocol>: ObservableObject, PresenterProtocol {
 
-    public enum LoginViewState {
-        case ready(id: String, password: String)
-        case loading
-        case success
-        case error(AlertError)
-    }
+    private let logger: Logger = .init(label: String(reflecting: LoginViewModel.self))
 
     @Published public private(set) var loginButtonEnabled: Bool = false
     @Published public private(set) var textFieldEnalbled: Bool = true
@@ -62,7 +58,7 @@ extension LoginViewModel {
 
     public func update(id: String, password: String) {
         switch state {
-        case .ready(_, _), .error(_):
+        case .ready(_, _), .error(_), .success:
             state = .ready(id: id, password: password)
         default: break
         }
@@ -78,6 +74,7 @@ extension LoginViewModel {
             try await interactor.login(id: id, password: password)
             state =  .success
         } catch {
+            logger.info("\(error)")
             state = .error(.init(error))
         }
     }
@@ -90,4 +87,11 @@ extension LoginViewModel {
     public func setToRouter(_ viewController: UIViewController) {
         router.viewController = viewController
     }
+}
+
+public enum LoginViewState {
+    case ready(id: String, password: String)
+    case loading
+    case success
+    case error(AlertError)
 }

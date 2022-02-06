@@ -9,7 +9,7 @@ let package = Package(
     products: [
         .library(
             name: "VIPER",
-            targets: ["ViewBuilders"]
+            targets: ["ViewBuilders", "ApplicationCommon"]
         ),
     ],
     dependencies: [
@@ -18,6 +18,10 @@ let package = Package(
     ],
     targets: [
         .target(
+            name: "ApplicationCommon",
+            dependencies: ["Interactors", "APIServices"]
+        ),
+        .target(
             name: "ViewBuilders",
             dependencies: ["Views"]
         ),
@@ -25,13 +29,16 @@ let package = Package(
             name: "Views",
             dependencies: [
                 "Presenters",
-                .product(name: "Logging", package: "swift-log"),
                 "Supports",
             ]
         ),
         .target(
             name: "Presenters",
-            dependencies: ["Interactors", "Routers"]
+            dependencies: [
+                "Interactors",
+                "Routers",
+                .product(name: "Logging", package: "swift-log"),
+            ]
         ),
         .target(
             name: "Routers",

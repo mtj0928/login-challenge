@@ -9,22 +9,22 @@ import UIKit
 
 import ViewBuilders
 import Interactors
-import Entities
+import Presenters
 import Routers
 
 class ApplicationViewResolver: ViewResolver {
 
-    private let environment: MockEnvironment
+    private let environment: ProductionEnvironment
 
-    init(_ environment: MockEnvironment) {
+    init(_ environment: ProductionEnvironment) {
         self.environment = environment
     }
 
     @MainActor
     func resolve(for type: ViewType) -> UIViewController {
         switch type {
-        case .login: return LoginViewBuilder<LoginUseCase>.resolve(environment)
-        case .home: return HomeViewBuilder<HomeUseCase>.resolve(environment)
+        case .login: return LoginViewBuilder<LoginUseCase>.resolve(.init(environment))
+        case .home: return HomeViewBuilder<HomeUseCase>.resolve(.init(environment))
         }
     }
 }

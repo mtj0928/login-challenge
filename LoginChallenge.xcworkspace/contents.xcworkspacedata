@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Projects/Apps/MainApp/LoginChallenge.xcodeproj">
+      location = "group:Projects/Apps/LoginChallenge/LoginChallenge.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Projects/Apps/MainApp/../Home/Home.xcodeproj">
+      location = "group:Projects/Apps/Home/Home.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Projects/APIServices">

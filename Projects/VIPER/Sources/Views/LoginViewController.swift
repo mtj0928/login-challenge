@@ -8,7 +8,7 @@ import Interactors
 import Supports
 
 @MainActor
-public final class LoginViewController<Interactor: AuthenticationUseCaseProtocol>: UIViewController {
+public final class LoginViewController<Interactor: LoginUseCaseProtocol>: UIViewController {
 
     private let idField: UITextField = {
         let textField = UITextField()
@@ -33,9 +33,6 @@ public final class LoginViewController<Interactor: AuthenticationUseCaseProtocol
         button.setTitle("Login", for: .normal)
         return button
     }()
-    
-    // String(reflecting:) はモジュール名付きの型名を取得するため。
-    private let logger: Logger = .init(label: String(reflecting: LoginViewController.self))
 
     private let activityIndicatorViewController: ActivityIndicatorViewController = {
         let activityIndicatorViewController: ActivityIndicatorViewController = .init()
@@ -108,6 +105,7 @@ extension LoginViewController {
         Task { await viewModel.login() }
     }
 
+    @MainActor
     private func updateViewModel() {
         viewModel.update(id: idField.text ?? "", password: passwordField.text ?? "")
     }
@@ -151,11 +149,11 @@ extension LoginViewController {
         Task {
             await activityIndicatorViewController.dismiss(animated: true)
             viewModel.showHomeView()
+            updateViewModel()
         }
     }
 
     private func handleError(_ alertableError: AlertError) {
-        logger.info("\(alertableError)")
         Task {
             await activityIndicatorViewController.dismiss(animated: true)
             await showAlert(alertableError)

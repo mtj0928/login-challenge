@@ -11,7 +11,7 @@
 		18F62F4027AFAA5300FCABCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F62F3F27AFAA5300FCABCD /* Assets.xcassets */; };
 		18F62F4627AFAA7800FCABCD /* ApplicationViewResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F62F4327AFAA7800FCABCD /* ApplicationViewResolver.swift */; };
 		18F62F4727AFAA7800FCABCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F62F4427AFAA7800FCABCD /* SceneDelegate.swift */; };
-		18F62F4827AFAA7800FCABCD /* ApplciationEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F62F4527AFAA7800FCABCD /* ApplciationEnvironment.swift */; };
+		18F62F4827AFAA7800FCABCD /* MockEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F62F4527AFAA7800FCABCD /* MockEnvironment.swift */; };
 		18F62F4A27AFAA8A00FCABCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F62F4927AFAA8A00FCABCD /* AppDelegate.swift */; };
 		D667330C279ABE8F00CC8AB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D667330A279ABE8F00CC8AB3 /* LaunchScreen.storyboard */; };
 		D667333B279ACAEC00CC8AB3 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = D667333A279ACAEC00CC8AB3 /* Logging */; };
@@ -24,7 +24,7 @@
 		18F62F4127AFAA5E00FCABCD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18F62F4327AFAA7800FCABCD /* ApplicationViewResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationViewResolver.swift; sourceTree = "<group>"; };
 		18F62F4427AFAA7800FCABCD /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		18F62F4527AFAA7800FCABCD /* ApplciationEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplciationEnvironment.swift; sourceTree = "<group>"; };
+		18F62F4527AFAA7800FCABCD /* MockEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockEnvironment.swift; sourceTree = "<group>"; };
 		18F62F4927AFAA8A00FCABCD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D66732FC279ABE8C00CC8AB3 /* Home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Home.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D667330B279ABE8F00CC8AB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,7 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				18F62F4927AFAA8A00FCABCD /* AppDelegate.swift */,
-				18F62F4527AFAA7800FCABCD /* ApplciationEnvironment.swift */,
+				18F62F4527AFAA7800FCABCD /* MockEnvironment.swift */,
 				18F62F4327AFAA7800FCABCD /* ApplicationViewResolver.swift */,
 				18F62F4427AFAA7800FCABCD /* SceneDelegate.swift */,
 				18F62F3F27AFAA5300FCABCD /* Assets.xcassets */,
@@ -164,7 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18F62F4A27AFAA8A00FCABCD /* AppDelegate.swift in Sources */,
-				18F62F4827AFAA7800FCABCD /* ApplciationEnvironment.swift in Sources */,
+				18F62F4827AFAA7800FCABCD /* MockEnvironment.swift in Sources */,
 				18F62F4627AFAA7800FCABCD /* ApplicationViewResolver.swift in Sources */,
 				18F62F4727AFAA7800FCABCD /* SceneDelegate.swift in Sources */,
 			);
@@ -310,7 +310,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AQ3JC8F3HL;
+				DEVELOPMENT_TEAM = 79Q7G522V8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Home/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -322,7 +322,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.koherent.LoginChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = net.matsuji.LoginChallenge.home;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -339,7 +339,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AQ3JC8F3HL;
+				DEVELOPMENT_TEAM = 79Q7G522V8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Home/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -351,7 +351,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.koherent.LoginChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = net.matsuji.LoginChallenge.home;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

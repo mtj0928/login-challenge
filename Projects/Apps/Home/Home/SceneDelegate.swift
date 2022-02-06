@@ -2,14 +2,14 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-    let environment = ApplicationEnvironment()
+    let environment = MockEnvironment()
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = environment.viewResolver.resolve(for: .home)
+        window.rootViewController = environment.viewResolver.resolve(for: .login)
         window.makeKeyAndVisible()
 
         self.window = window

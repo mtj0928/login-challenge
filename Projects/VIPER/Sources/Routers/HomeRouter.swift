@@ -13,11 +13,12 @@ import VIPERKit
 
 public class HomeRouter: RouterProtocol {
 
-    weak var viewController: UIViewController?
+    public weak var viewController: UIViewController?
 
-    public typealias Dependency = Void
+    private let environment: RouterEnvirnonment
 
-    public required init(_ dependency: Void) {
+    public required init(_ dependency: RouterEnvirnonment) {
+        self.environment = dependency
     }
 
     @MainActor

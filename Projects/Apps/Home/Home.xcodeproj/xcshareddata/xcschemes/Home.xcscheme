@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D66732FB279ABE8C00CC8AB3"
-               BuildableName = "LoginChallenge.app"
+               BuildableName = "Home.app"
                BlueprintName = "Home"
                ReferencedContainer = "container:Home.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D66732FB279ABE8C00CC8AB3"
-            BuildableName = "LoginChallenge.app"
+            BuildableName = "Home.app"
             BlueprintName = "Home"
             ReferencedContainer = "container:Home.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D66732FB279ABE8C00CC8AB3"
-            BuildableName = "LoginChallenge.app"
+            BuildableName = "Home.app"
             BlueprintName = "Home"
             ReferencedContainer = "container:Home.xcodeproj">
          </BuildableReference>

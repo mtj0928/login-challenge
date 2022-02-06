@@ -6,25 +6,27 @@
 //
 
 import Foundation
-
-import Routers
-import Views
 import SwiftUI
 
-public enum HomeViewBuilder {
-    public struct Dependency {
-        public let routerEnvironment: RouterEnvirnonment
+import Views
+import Interactors
+import Presenters
+import Routers
+import VIPERKit
 
-        public init(_ environment: RouterEnvirnonment) {
-            self.routerEnvironment = environment
-        }
-    }
+public enum HomeViewBuilder<UseCase: HomeUseCaseProtocol> {
 
     @MainActor
-    public static func resolve(_ dependency: Dependency) -> UIViewController {
-        let viewController = UIHostingController(rootView: HomeView())
+    public static func resolve(_ dependency: ApplicationEnvironment) -> UIViewController {
+        let viewModel = PresenterBuilder<HomeViewModel<UseCase>>.create()
+            .interactor(dependency)
+            .router(dependency)
+            .build(noDependency)
+
+        let viewController = UIHostingController(rootView: HomeView(viewModel))
         viewController.modalPresentationStyle = .fullScreen
         viewController.modalTransitionStyle = .flipHorizontal
+        viewModel.setToRouter(viewController)
         return viewController
     }
 }

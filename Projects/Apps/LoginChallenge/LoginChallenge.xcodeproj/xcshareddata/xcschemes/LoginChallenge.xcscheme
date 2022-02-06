@@ -28,26 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D6673311279ABE8F00CC8AB3"
-               BuildableName = "LoginChallengeTests.xctest"
-               BlueprintName = "LoginChallengeTests"
-               ReferencedContainer = "container:LoginChallenge.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D667331B279ABE8F00CC8AB3"
-               BuildableName = "LoginChallengeUITests.xctest"
-               BlueprintName = "LoginChallengeUITests"
-               ReferencedContainer = "container:LoginChallenge.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
