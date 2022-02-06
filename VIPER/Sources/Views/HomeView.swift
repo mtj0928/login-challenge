@@ -3,11 +3,14 @@ import Entities
 import APIServices
 import Logging
 
+import Views
+
 @MainActor
 private let logger: Logger = .init(label: String(reflecting: HomeView.self))
 
 @MainActor
-struct HomeView: View {
+public struct HomeView: View {
+
     @State private var user: User?
     
     @State private var isReloading: Bool = false
@@ -20,8 +23,13 @@ struct HomeView: View {
     @State private var presentsSystemErrorAlert: Bool = false
     
     let dismiss: () async -> Void
-    
-    var body: some View {
+
+    public init() {
+        dismiss = {
+        }
+    }
+
+    public var body: some View {
         ZStack {
             VStack(spacing: 0) {
                 VStack(spacing: 10) {
@@ -146,26 +154,26 @@ struct HomeView: View {
             self.user = user
         } catch let error as AuthenticationError {
             logger.info("\(error)")
-            
+
             // エラー情報を表示。
             presentsAuthenticationErrorAlert = true
         } catch let error as NetworkError {
             logger.info("\(error)")
-            
+
             // エラー情報を表示。
             presentsNetworkErrorAlert = true
         } catch let error as ServerError {
             logger.info("\(error)")
-            
+
             // エラー情報を表示。
             presentsServerErrorAlert = true
         } catch {
             logger.info("\(error)")
-            
+
             // エラー情報を表示。
             presentsSystemErrorAlert = true
         }
-        
+
         // 処理が完了したのでリロードボタン押下を再度受け付けるように。
         isReloading = false
     }

@@ -1,8 +1,9 @@
 import UIKit
 
 @MainActor
-final class ActivityIndicatorViewController: UIViewController {
-    override func viewDidLoad() {
+public final class ActivityIndicatorViewController: UIViewController {
+
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor { traitCollection in
