@@ -2,15 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:LoginChallenge.xcodeproj">
+      location = "group:Projects/Apps/MainApp/LoginChallenge.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Entities">
+      location = "group:Projects/Apps/MainApp/../Home/Home.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:APIServices">
+      location = "group:Projects/APIServices">
    </FileRef>
    <FileRef
-      location = "group:VIPER">
+      location = "group:Projects/Entities">
+   </FileRef>
+   <FileRef
+      location = "group:Projects/VIPER">
    </FileRef>
 </Workspace>
