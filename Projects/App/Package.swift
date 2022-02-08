@@ -4,12 +4,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "VIPER",
+    name: "App",
     platforms: [.iOS(.v15)],
     products: [
         .library(
-            name: "VIPER",
-            targets: ["ViewBuilders", "ApplicationCommon"]
+            name: "App",
+            targets: ["ViewBuilders", "App"]
         ),
     ],
     dependencies: [
@@ -18,8 +18,8 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "ApplicationCommon",
-            dependencies: ["Interactors", "APIServices"]
+            name: "App",
+            dependencies: ["ViewBuilders", "APIServices"]
         ),
         .target(
             name: "ViewBuilders",
@@ -50,7 +50,7 @@ let package = Package(
         .target(name: "Supports"),
         .target(name: "VIPERKit"),
         .testTarget(
-            name: "InteractorsTests",
-            dependencies: ["Interactors"]),
+            name: "AppTests",
+            dependencies: ["App"]),
     ]
 )

@@ -99,6 +99,7 @@ extension LoginViewController {
     }
 
     private func addSubviews() {
+        stackView.addArrangedSubview(idField)
         stackView.addArrangedSubview(passwordField)
         view.addSubview(stackView)
         view.addSubview(loginButton)

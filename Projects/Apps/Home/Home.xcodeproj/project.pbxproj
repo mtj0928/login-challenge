@@ -7,16 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18F62F3827AF8B5500FCABCD /* VIPER in Frameworks */ = {isa = PBXBuildFile; productRef = 18F62F3727AF8B5500FCABCD /* VIPER */; };
+		18367A4627B28A1000C03343 /* App in Frameworks */ = {isa = PBXBuildFile; productRef = 18367A4527B28A1000C03343 /* App */; };
 		18F62F4027AFAA5300FCABCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F62F3F27AFAA5300FCABCD /* Assets.xcassets */; };
 		18F62F4627AFAA7800FCABCD /* ApplicationViewResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F62F4327AFAA7800FCABCD /* ApplicationViewResolver.swift */; };
 		18F62F4727AFAA7800FCABCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F62F4427AFAA7800FCABCD /* SceneDelegate.swift */; };
 		18F62F4827AFAA7800FCABCD /* MockEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F62F4527AFAA7800FCABCD /* MockEnvironment.swift */; };
 		18F62F4A27AFAA8A00FCABCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F62F4927AFAA8A00FCABCD /* AppDelegate.swift */; };
 		D667330C279ABE8F00CC8AB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D667330A279ABE8F00CC8AB3 /* LaunchScreen.storyboard */; };
-		D667333B279ACAEC00CC8AB3 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = D667333A279ACAEC00CC8AB3 /* Logging */; };
-		D6673341279AFFF900CC8AB3 /* APIServices in Frameworks */ = {isa = PBXBuildFile; productRef = D6673340279AFFF900CC8AB3 /* APIServices */; };
-		D6673343279AFFF900CC8AB3 /* Entities in Frameworks */ = {isa = PBXBuildFile; productRef = D6673342279AFFF900CC8AB3 /* Entities */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,10 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D667333B279ACAEC00CC8AB3 /* Logging in Frameworks */,
-				D6673341279AFFF900CC8AB3 /* APIServices in Frameworks */,
-				D6673343279AFFF900CC8AB3 /* Entities in Frameworks */,
-				18F62F3827AF8B5500FCABCD /* VIPER in Frameworks */,
+				18367A4627B28A1000C03343 /* App in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,10 +94,7 @@
 			);
 			name = Home;
 			packageProductDependencies = (
-				D667333A279ACAEC00CC8AB3 /* Logging */,
-				D6673340279AFFF900CC8AB3 /* APIServices */,
-				D6673342279AFFF900CC8AB3 /* Entities */,
-				18F62F3727AF8B5500FCABCD /* VIPER */,
+				18367A4527B28A1000C03343 /* App */,
 			);
 			productName = LoginChallenge;
 			productReference = D66732FC279ABE8C00CC8AB3 /* Home.app */;
@@ -394,22 +385,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		18F62F3727AF8B5500FCABCD /* VIPER */ = {
+		18367A4527B28A1000C03343 /* App */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = VIPER;
-		};
-		D667333A279ACAEC00CC8AB3 /* Logging */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D6673339279ACAEC00CC8AB3 /* XCRemoteSwiftPackageReference "swift-log" */;
-			productName = Logging;
-		};
-		D6673340279AFFF900CC8AB3 /* APIServices */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = APIServices;
-		};
-		D6673342279AFFF900CC8AB3 /* Entities */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Entities;
+			productName = App;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
