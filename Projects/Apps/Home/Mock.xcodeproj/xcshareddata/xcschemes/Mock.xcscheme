@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D66732FB279ABE8C00CC8AB3"
                BuildableName = "Home.app"
-               BlueprintName = "Home"
-               ReferencedContainer = "container:Home.xcodeproj">
+               BlueprintName = "Mock"
+               ReferencedContainer = "container:Mock.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,8 +46,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D66732FB279ABE8C00CC8AB3"
             BuildableName = "Home.app"
-            BlueprintName = "Home"
-            ReferencedContainer = "container:Home.xcodeproj">
+            BlueprintName = "Mock"
+            ReferencedContainer = "container:Mock.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D66732FB279ABE8C00CC8AB3"
             BuildableName = "Home.app"
-            BlueprintName = "Home"
-            ReferencedContainer = "container:Home.xcodeproj">
+            BlueprintName = "Mock"
+            ReferencedContainer = "container:Mock.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

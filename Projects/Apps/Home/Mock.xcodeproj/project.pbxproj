@@ -23,7 +23,7 @@
 		18F62F4427AFAA7800FCABCD /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		18F62F4527AFAA7800FCABCD /* MockEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockEnvironment.swift; sourceTree = "<group>"; };
 		18F62F4927AFAA8A00FCABCD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D66732FC279ABE8C00CC8AB3 /* Home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Home.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D66732FC279ABE8C00CC8AB3 /* Mock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D667330B279ABE8F00CC8AB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -39,7 +39,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18F62F4C27AFAC7000FCABCD /* Home */ = {
+		18F62F4C27AFAC7000FCABCD /* Mock */ = {
 			isa = PBXGroup;
 			children = (
 				18F62F4927AFAA8A00FCABCD /* AppDelegate.swift */,
@@ -50,13 +50,13 @@
 				18F62F4527AFAA7800FCABCD /* MockEnvironment.swift */,
 				18F62F4427AFAA7800FCABCD /* SceneDelegate.swift */,
 			);
-			path = Home;
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		D66732F3279ABE8C00CC8AB3 = {
 			isa = PBXGroup;
 			children = (
-				18F62F4C27AFAC7000FCABCD /* Home */,
+				18F62F4C27AFAC7000FCABCD /* Mock */,
 				D66732FD279ABE8C00CC8AB3 /* Products */,
 				D6673334279AC58A00CC8AB3 /* Frameworks */,
 			);
@@ -65,7 +65,7 @@
 		D66732FD279ABE8C00CC8AB3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D66732FC279ABE8C00CC8AB3 /* Home.app */,
+				D66732FC279ABE8C00CC8AB3 /* Mock.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,9 +80,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D66732FB279ABE8C00CC8AB3 /* Home */ = {
+		D66732FB279ABE8C00CC8AB3 /* Mock */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D6673326279ABE8F00CC8AB3 /* Build configuration list for PBXNativeTarget "Home" */;
+			buildConfigurationList = D6673326279ABE8F00CC8AB3 /* Build configuration list for PBXNativeTarget "Mock" */;
 			buildPhases = (
 				D66732F8279ABE8C00CC8AB3 /* Sources */,
 				D66732F9279ABE8C00CC8AB3 /* Frameworks */,
@@ -92,12 +92,12 @@
 			);
 			dependencies = (
 			);
-			name = Home;
+			name = Mock;
 			packageProductDependencies = (
 				18367A4527B28A1000C03343 /* App */,
 			);
 			productName = LoginChallenge;
-			productReference = D66732FC279ABE8C00CC8AB3 /* Home.app */;
+			productReference = D66732FC279ABE8C00CC8AB3 /* Mock.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -116,7 +116,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D66732F7279ABE8C00CC8AB3 /* Build configuration list for PBXProject "Home" */;
+			buildConfigurationList = D66732F7279ABE8C00CC8AB3 /* Build configuration list for PBXProject "Mock" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -132,7 +132,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D66732FB279ABE8C00CC8AB3 /* Home */,
+				D66732FB279ABE8C00CC8AB3 /* Mock */,
 			);
 		};
 /* End PBXProject section */
@@ -303,7 +303,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 79Q7G522V8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Home/Info.plist;
+				INFOPLIST_FILE = Mock/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -332,7 +332,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 79Q7G522V8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Home/Info.plist;
+				INFOPLIST_FILE = Mock/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -353,7 +353,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D66732F7279ABE8C00CC8AB3 /* Build configuration list for PBXProject "Home" */ = {
+		D66732F7279ABE8C00CC8AB3 /* Build configuration list for PBXProject "Mock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D6673324279ABE8F00CC8AB3 /* Debug */,
@@ -362,7 +362,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D6673326279ABE8F00CC8AB3 /* Build configuration list for PBXNativeTarget "Home" */ = {
+		D6673326279ABE8F00CC8AB3 /* Build configuration list for PBXNativeTarget "Mock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D6673327279ABE8F00CC8AB3 /* Debug */,
