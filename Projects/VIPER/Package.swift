@@ -46,7 +46,7 @@ let package = Package(
         ),
         .target(
             name: "Interactors",
-            dependencies: ["APIServices", "VIPERKit"]),
+            dependencies: ["VIPERKit"]),
         .target(name: "Supports"),
         .target(name: "VIPERKit"),
         .testTarget(

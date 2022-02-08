@@ -22,7 +22,6 @@ public protocol AuthServiceProtocol {
     static func logOut() async
 }
 
-
 public protocol UserServiceProtocol {
     static func currentUser() async throws -> User
 }

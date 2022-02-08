@@ -49,12 +49,12 @@
 			isa = PBXGroup;
 			children = (
 				18F62F4927AFAA8A00FCABCD /* AppDelegate.swift */,
-				18F62F4527AFAA7800FCABCD /* MockEnvironment.swift */,
 				18F62F4327AFAA7800FCABCD /* ApplicationViewResolver.swift */,
-				18F62F4427AFAA7800FCABCD /* SceneDelegate.swift */,
 				18F62F3F27AFAA5300FCABCD /* Assets.xcassets */,
-				D667330A279ABE8F00CC8AB3 /* LaunchScreen.storyboard */,
 				18F62F4127AFAA5E00FCABCD /* Info.plist */,
+				D667330A279ABE8F00CC8AB3 /* LaunchScreen.storyboard */,
+				18F62F4527AFAA7800FCABCD /* MockEnvironment.swift */,
+				18F62F4427AFAA7800FCABCD /* SceneDelegate.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";

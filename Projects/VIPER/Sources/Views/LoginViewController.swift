@@ -12,6 +12,7 @@ public final class LoginViewController<Interactor: LoginUseCaseProtocol>: UIView
 
     private let idField: UITextField = {
         let textField = UITextField()
+        textField.borderStyle = .roundedRect
         textField.textColor = .label
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "ID"
@@ -21,17 +22,26 @@ public final class LoginViewController<Interactor: LoginUseCaseProtocol>: UIView
     private let passwordField: UITextField = {
         let textField = UITextField()
         textField.textColor = .label
+        textField.borderStyle = .roundedRect
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "PASSWORD"
         textField.isSecureTextEntry = true
         return textField
     }()
 
-    private var loginButton: UIButton! = {
+    private let loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Login", for: .normal)
         return button
+    }()
+
+    private let stackView: UIStackView = {
+        let vstack = UIStackView()
+        vstack.axis = .vertical
+        vstack.spacing = 20
+        vstack.translatesAutoresizingMaskIntoConstraints = false
+        return vstack
     }()
 
     private let activityIndicatorViewController: ActivityIndicatorViewController = {
@@ -70,31 +80,35 @@ extension LoginViewController {
     private func setupView() {
         view.backgroundColor = .systemBackground
 
-        [idField, passwordField].forEach {
-            $0.addAction(
-                UIAction { [weak self] _ in self?.updateViewModel() },
-                for: .editingChanged
-            )
+        addActions()
+        addSubviews()
+        addAutoLayoutConstraint()
+    }
+
+    private func addActions() {
+        [idField, passwordField].forEach { textField in
+            textField.addAction(
+                .init { [weak self] _ in self?.updateViewModel() },
+                for: .editingChanged)
         }
 
         loginButton.addAction(
-            UIAction { [weak self] _ in self?.loginButtonPressed() },
+            .init { [weak self] _ in self?.loginButtonPressed() },
             for: .touchUpInside
         )
+    }
 
-        let vstack = UIStackView(arrangedSubviews: [idField, passwordField])
-        vstack.axis = .vertical
-        vstack.spacing = 20
-        vstack.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(vstack)
-
+    private func addSubviews() {
+        stackView.addArrangedSubview(passwordField)
+        view.addSubview(stackView)
         view.addSubview(loginButton)
+    }
 
-        // Layout
+    private func addAutoLayoutConstraint() {
         [
-            vstack.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            vstack.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            vstack.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 20),
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            stackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            stackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 20),
             loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             loginButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30)
         ]
@@ -105,12 +119,14 @@ extension LoginViewController {
         Task { await viewModel.login() }
     }
 
-    @MainActor
     private func updateViewModel() {
         viewModel.update(id: idField.text ?? "", password: passwordField.text ?? "")
     }
+}
 
-    // MARK: - Observe ViewModel
+// MARK: - Observe ViewModel
+
+extension LoginViewController {
 
     private func observeViewModel() {
         viewModel.$state
