@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D66732FB279ABE8C00CC8AB3"
-               BuildableName = "Home.app"
+               BuildableName = "Mock.app"
                BlueprintName = "Mock"
                ReferencedContainer = "container:Mock.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D66732FB279ABE8C00CC8AB3"
-            BuildableName = "Home.app"
+            BuildableName = "Mock.app"
             BlueprintName = "Mock"
             ReferencedContainer = "container:Mock.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D66732FB279ABE8C00CC8AB3"
-            BuildableName = "Home.app"
+            BuildableName = "Mock.app"
             BlueprintName = "Mock"
             ReferencedContainer = "container:Mock.xcodeproj">
          </BuildableReference>

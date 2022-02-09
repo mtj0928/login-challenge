@@ -5,7 +5,7 @@
       location = "group:Projects/Apps/LoginChallenge/LoginChallenge.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/matsuji/Desktop/login-challenge/Projects/Apps/Home/Mock.xcodeproj">
+      location = "group:Projects/Apps/Mock/Mock.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Projects/APIServices">
