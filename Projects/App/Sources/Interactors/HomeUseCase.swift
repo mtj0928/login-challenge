@@ -8,7 +8,6 @@
 import Foundation
 import VIPERKit
 import Entities
-import APIServices
 
 public protocol HomeUseCaseProtocol: InteractorProcotol where Dependency == InteractorEnvironment {
     func logout() async

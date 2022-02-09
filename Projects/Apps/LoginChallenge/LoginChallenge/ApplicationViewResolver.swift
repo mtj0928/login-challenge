@@ -23,8 +23,8 @@ class ApplicationViewResolver: ViewResolver {
     @MainActor
     func resolve(for type: ViewType) -> UIViewController {
         switch type {
-        case .login: return LoginViewBuilder<LoginUseCase>.resolve(.init(environment))
-        case .home: return HomeViewBuilder<HomeUseCase>.resolve(.init(environment))
+        case .login: return LoginViewBuilder<LoginUseCase>.resolve(environment)
+        case .home: return HomeViewBuilder<HomeUseCase>.resolve(environment)
         }
     }
 }
