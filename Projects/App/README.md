@@ -1,5 +1,5 @@
 
-#Apps
+# Apps
 今回のアプリはミニアプリが実現できるような構成になってます。  
 Appsの中にはlogin-chllengeアプリもmockアプリの二つのアプリがあります。  
 login-challengeは本番用のアプリで、mockアプリには通信がすべてmockされたアプリです。  
