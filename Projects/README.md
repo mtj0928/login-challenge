@@ -1,7 +1,7 @@
 
 # Apps
 今回のアプリはミニアプリが実現できるような構成になってます。  
-Appsの中にはlogin-chllengeアプリもmockアプリの二つのアプリがあります。  
+Appsの中にはlogin-chllengeアプリとmockアプリの二つのアプリがあります。  
 login-challengeは本番用のアプリで、mockアプリには通信がすべてmockされたアプリです。  
 両方のアプリがAppモジュールに依存しており、アプリの主な構成自体らAppsモジュールの中にあります。
 今回のlogin-chllengeのデバッグの難しさの一つにAuthServiceやUserServiceの挙動が安定しないことが挙げられます。  
